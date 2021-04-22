@@ -5,7 +5,11 @@
 !.eslintrc.json
 !.stylelintrc.json
 !README.md
-!index.html
 
+!gulpfile.js
+!package.json
+!package-lock.json
+
+!index.html
 !css/
 !js/

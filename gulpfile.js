@@ -118,7 +118,7 @@ let gulp = () => {
     ).on(`change`, reload);
 };
 
-exports.allBrowsers = series(allBrowsers, dev);
+exports.allBrowsers = series(allBrowsers, gulp);
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;
 exports.compileCSSForDev = compileCSSForDev;

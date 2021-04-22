@@ -34,18 +34,18 @@ async function edge () {
 
 let validateHTML = () => {
     return src(
-        `Dev/html/*.html`)
+        `dev/html/*.html`)
         .pipe(htmlValidator());
 };
 
 let compressHTML = () => {
-    return src(`Dev/html/*.html`)
+    return src(`dev/html/*.html`)
         .pipe(htmlCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod/html`));
 };
 
 let lintCSS = () => {
-    return src(`Dev/css/*.css`)
+    return src(`dev/css/*.css`)
         .pipe(cssLinter({
             failAfterError: true,
             reporters: [
@@ -55,7 +55,7 @@ let lintCSS = () => {
 };
 
 let compileCSSForDev = () => {
-    return src(`Dev/css/*.css`)
+    return src(`dev/css/*.css`)
         .pipe(sass({
             outputStyle: `expanded`,
             precision: 10
@@ -64,7 +64,7 @@ let compileCSSForDev = () => {
 };
 
 let compileCSSForProd = () => {
-    return src(`Dev/css/*.css`)
+    return src(`dev/css/*.css`)
         .pipe(sass({
             outputStyle: `compressed`,
             precision: 10
@@ -73,20 +73,20 @@ let compileCSSForProd = () => {
 };
 
 let transpileJSForDev = () => {
-    return src(`Dev/js/*.js`)
+    return src(`dev/js/*.js`)
         .pipe(babel())
         .pipe(dest(`temp/js`));
 };
 
 let transpileJSForProd = () => {
-    return src(`Dev/js/*.js`)
+    return src(`dev/js/*.js`)
         .pipe(babel())
         .pipe(jsCompressor())
         .pipe(dest(`prod/js`));
 };
 
 let lintJS = () => {
-    return src(`Dev/js/*.js`)
+    return src(`dev/js/*.js`)
         .pipe(jsLinter({
             parserOptions: {
                 ecmaVersion: 2017,
@@ -116,21 +116,21 @@ let serve = () => {
         server: {
             baseDir: [
                 `temp`,
-                `Dev`,
-                `Dev/html`
+                `dev`,
+                `dev/html`
             ]
         }
     });
 
-    watch(`Dev/js/*.js`,
+    watch(`dev/js/*.js`,
         series(lintJS, transpileJSForDev)
     ).on(`change`, reload);
 
-    watch(`Dev/css/*.css`,
+    watch(`dev/css/*.css`,
         series(lintCSS, compileCSSForDev)
     ).on(`change`, reload);
 
-    watch(`Dev/html/*.html`,
+    watch(`dev/html/*.html`,
         series(validateHTML)
     ).on(`change`, reload);
 

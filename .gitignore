@@ -11,5 +11,6 @@
 !package.json
 !package-lock.json
 
+!dev/
 !css/
 !js/

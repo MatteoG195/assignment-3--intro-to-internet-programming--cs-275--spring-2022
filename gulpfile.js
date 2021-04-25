@@ -10,12 +10,12 @@ const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 
 let validateHTML = () => {
-    return src([`html/*.html`,`html/**/*.html`])
+    return src(`*.html`)
         .pipe(htmlValidator());
 };
 
 let compressHTML = () => {
-    return src([`html/*.html`,`html/**/*.html`])
+    return src(`*.html`)
         .pipe(htmlCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod`));
 };

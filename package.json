@@ -16,5 +16,17 @@
   "bugs": {
     "url": "https://github.com/code-warrior/assignment-3--intro-to-internet-programming--cs-275--spring-2021/issues"
   },
-  "homepage": "https://github.com/code-warrior/assignment-3--intro-to-internet-programming--cs-275--spring-2021#readme"
+  "homepage": "https://github.com/code-warrior/assignment-3--intro-to-internet-programming--cs-275--spring-2021#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-html": "^3.4.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-stylelint": "^13.0.0",
+    "stylelint": "^13.13.0"
+  }
 }

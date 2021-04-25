@@ -1,0 +1,20 @@
+table {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 15%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 5px solid #ec3f48;
+  padding: 30px;
+  text-align: center;
+  font-size: 40px;
+  color: #ec3f48;
+  font-family: 'copperplate', fantasy;
+}
+
+body {
+  background-color: #f0dadb;
+}

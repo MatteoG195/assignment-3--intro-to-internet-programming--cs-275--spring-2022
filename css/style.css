@@ -12,7 +12,12 @@ td {
   text-align: center;
   font-size: 40px;
   color: #ec3f48;
-  font-family: 'copperplate', fantasy;
+  font-family: copperplate, fantasy;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform .5s ease;
 }
 
 body {

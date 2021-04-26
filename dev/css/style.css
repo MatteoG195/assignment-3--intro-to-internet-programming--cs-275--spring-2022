@@ -13,3 +13,12 @@ table{
   height: auto;
   border-collapse: collapse;
 }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

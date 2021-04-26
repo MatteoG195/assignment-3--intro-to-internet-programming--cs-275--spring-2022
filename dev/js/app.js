@@ -6,7 +6,6 @@ for(i = 0; i<list.length; i++){
 
 function rotation(event){
     var target = event.target;
-    console.log(target);
     if(rotated == false){
         target.style.transform = 'rotate(180deg)';
         rotated = true;

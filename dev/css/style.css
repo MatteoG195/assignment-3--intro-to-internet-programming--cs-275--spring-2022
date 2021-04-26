@@ -14,11 +14,12 @@ table{
   border-collapse: collapse;
 }
 
-@keyframes rotation {
+
+@keyframes rotating {
   from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
+   transform: rotate(0deg);
+ }
+ to {
+   transform: rotate(180deg);
+ }
 }

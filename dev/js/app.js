@@ -5,6 +5,9 @@ for(i = 0; i<list.length; i++){
 }
 
 function rotation(target){
+    for(z = 0; z<list.length; z++){
+        list[z].style.transform = 'rotate(360deg)';
+    }
     let goal = event.target;
     if(rotated == false){
         goal.style.transform = 'rotate(180deg)';

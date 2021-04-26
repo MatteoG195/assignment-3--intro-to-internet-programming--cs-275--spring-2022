@@ -4,13 +4,14 @@ for(i = 0; i<list.length; i++){
     list[i].addEventListener('click',rotation);
 }
 
-function rotation(){
-    var test = document.getElementsByTagName(`td`);
+function rotation(event){
+    var target = event.target;
+    console.log(target);
     if(rotated == false){
-        test[0].style.transform = 'rotate(180deg)';
+        target.style.transform = 'rotate(180deg)';
         rotated = true;
     }else{
-        test[0].style.transform = 'rotate(360deg)';
+        target.style.transform = 'rotate(360deg)';
         rotated = false;
     };
 }

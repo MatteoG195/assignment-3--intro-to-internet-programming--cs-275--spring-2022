@@ -2,5 +2,6 @@ table{
   width: 15%;
   margin: auto;
   margin-top: 20%;
+  border-collapse: collapse;
 }
 

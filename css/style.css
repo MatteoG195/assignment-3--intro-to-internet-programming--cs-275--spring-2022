@@ -12,3 +12,5 @@ td{
   transition: transform 0.5s;
 }
 
+td:hover{
+}

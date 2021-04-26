@@ -9,35 +9,31 @@ window.onload = () => {
 
     A.addEventListener(`click`, () => {
         rotate(A);
-        past = A;
     });
 
     B.addEventListener(`click`, () => {
         rotate(B);
-        past = B;
     });
 
     C.addEventListener(`click`, () => {
         rotate(C);
-        past = C;
     });
 
     D.addEventListener(`click`, () => {
         rotate(D);
-        past = D;
     });
 
     function rotate(letter){
-        letter.classList.add(`rotate`);
-        unrotate(past);
         letter.classList.remove(`undo`);
+        unrotate(past);
+        letter.classList.add(`rotate`);
         past = letter;
     }
 
     function unrotate(letter){
         if(letter != `Null`){
-            letter.classList.add(`undo`);
             letter.classList.remove(`rotate`);
+            letter.classList.add(`undo`);
         }
     }
 

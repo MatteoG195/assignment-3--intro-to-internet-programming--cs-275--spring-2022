@@ -1,18 +1,44 @@
 window.onload = () => {
-    var A = document.querySelectorAll(`td`)[0];
-    var B = document.querySelectorAll(`td`)[1];
-    var C = document.querySelectorAll(`td`)[2];
-    var D = document.querySelectorAll(`td`)[3];
+
+    var all = document.querySelectorAll(`td`);
+    var A = all[0];
+    var B = all[1];
+    var C = all[2];
+    var D = all[3];
+    var past = `Null`;
+
     A.addEventListener(`click`, () => {
-        A.classList.add(`rotate`);
+        rotate(A);
+        past = A;
     });
+
     B.addEventListener(`click`, () => {
-        B.classList.add(`rotate`);
+        rotate(B);
+        past = B;
     });
+
     C.addEventListener(`click`, () => {
-        C.classList.add(`rotate`);
+        rotate(C);
+        past = C;
     });
+
     D.addEventListener(`click`, () => {
-        D.classList.add(`rotate`);
+        rotate(D);
+        past = D;
     });
+
+    function rotate(letter){
+        letter.classList.add(`rotate`);
+        unrotate(past);
+        letter.classList.remove(`undo`);
+        past = letter;
+    }
+
+    function unrotate(letter){
+        if(letter != `Null`){
+            letter.classList.add(`undo`);
+            letter.classList.remove(`rotate`);
+        }
+    }
+
 };

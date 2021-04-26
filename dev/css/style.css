@@ -11,4 +11,5 @@ table{
   margin-top: 15%;
   width: 50%;
   height: auto;
+  border-collapse: collapse;
 }

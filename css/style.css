@@ -20,6 +20,11 @@ td {
   transition: transform .5s ease;
 }
 
+.undo {
+  transform: rotate(0deg);
+  transition: transform .5s ease;
+}
+
 body {
   background-color: #f0dadb;
 }

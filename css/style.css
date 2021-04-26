@@ -13,4 +13,5 @@ td{
 }
 
 td:hover{
+  transform: rotate(180deg);
 }

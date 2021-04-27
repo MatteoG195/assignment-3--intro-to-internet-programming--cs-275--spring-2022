@@ -74,4 +74,26 @@ window.onload = () => {
             rotatedC = false;
         }
     };
+
+    let rotateD = () => {
+        if(!rotatedD) {
+            letterD.style.transition = `transform .5s`;
+            letterD.style.transform = `rotate(180deg)`;
+            rotatedD = true;
+            letterA.style.transition = `transform .5s`;
+            letterA.style.transform = `rotate(0deg)`;
+            rotatedA = false;
+            letterB.style.transition = `transform .5s`;
+            letterB.style.transform = `rotate(0deg)`;
+            rotatedB = false;
+            letterC.style.transition = `transform .5s`;
+            letterC.style.transform = `rotate(0deg)`;
+            rotatedC = false;
+        }
+        else {
+            letterD.style.transition = `transform .5s`;
+            letterD.style.transform = `rotate(0deg)`;
+            rotatedD = false;
+        }
+    };
 };

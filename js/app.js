@@ -1,11 +1,11 @@
 window.onload = () => {
 
-    var all = document.querySelectorAll(`td`);
-    var A = all[0];
-    var B = all[1];
-    var C = all[2];
-    var D = all[3];
-    var past = `Null`;
+    let all = document.querySelectorAll(`td`);
+    let A = all[0];
+    let B = all[1];
+    let C = all[2];
+    let D = all[3];
+    let past = null;
 
     A.addEventListener(`click`, () => {
         rotate(A);
@@ -24,17 +24,19 @@ window.onload = () => {
     });
 
     function rotate(letter){
-        letter.classList.remove(`undo`);
-        unrotate(past);
+        if(letter.classList.contains(`normal`)){
+            letter.classList.remove(`normal`);
+        }
+        if(past != null && past.classList.contains(`rotate`)){
+            unrotate(past);
+        }
         letter.classList.add(`rotate`);
         past = letter;
     }
 
     function unrotate(letter){
-        if(letter != `Null`){
-            letter.classList.remove(`rotate`);
-            letter.classList.add(`undo`);
-        }
+        letter.classList.remove(`rotate`);
+        letter.classList.add(`normal`);
     }
 
 };

@@ -52,4 +52,26 @@ window.onload = () => {
             rotatedB = false;
         }
     };
+
+    let rotateC = () => {
+        if(!rotatedC) {
+            letterC.style.transition = `transform .5s`;
+            letterC.style.transform = `rotate(180deg)`;
+            rotatedC = true;
+            letterA.style.transition = `transform .5s`;
+            letterA.style.transform = `rotate(0deg)`;
+            rotatedA = false;
+            letterB.style.transition = `transform .5s`;
+            letterB.style.transform = `rotate(0deg)`;
+            rotatedB = false;
+            letterD.style.transition = `transform .5s`;
+            letterD.style.transform = `rotate(0deg)`;
+            rotatedD = false;
+        }
+        else {
+            letterC.style.transition = `transform .5s`;
+            letterC.style.transform = `rotate(0deg)`;
+            rotatedC = false;
+        }
+    };
 };

@@ -8,4 +8,26 @@ window.onload = () => {
     let rotatedB = false;
     let rotatedC = false;
     let rotatedD = false;
+
+    let rotateA = () => {
+        if(!rotatedA) {
+            letterA.style.transition = `transform .5s`;
+            letterA.style.transform = `rotate(180deg)`;
+            rotatedA = true;
+            letterB.style.transition = `transform .5s`;
+            letterB.style.transform = `rotate(0deg)`;
+            rotatedB = false;
+            letterC.style.transition = `transform .5s`;
+            letterC.style.transform = `rotate(0deg)`;
+            rotatedC = false;
+            letterD.style.transition = `transform .5s`;
+            letterD.style.transform = `rotate(0deg)`;
+            rotatedD = false;
+        }
+        else {
+            letterA.style.transition = `transform .5s`;
+            letterA.style.transform = `rotate(0deg)`;
+            rotatedA = false;
+        }
+    };
 };

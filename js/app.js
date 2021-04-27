@@ -4,5 +4,8 @@ window.onload = () => {
     let letterC = document.querySelectorAll(`td`)[2];
     let letterD = document.querySelectorAll(`td`)[3];
 
-    console.log(letterA);
+    let rotatedA = false;
+    let rotatedB = false;
+    let rotatedC = false;
+    let rotatedD = false;
 };

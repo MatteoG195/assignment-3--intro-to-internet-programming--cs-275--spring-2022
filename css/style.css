@@ -20,7 +20,7 @@ td {
   transition: transform .5s ease;
 }
 
-.undo {
+.normal {
   transform: rotate(0deg);
   transition: transform .5s ease;
 }

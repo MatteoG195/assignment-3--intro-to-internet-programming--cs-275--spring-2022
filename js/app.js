@@ -30,4 +30,26 @@ window.onload = () => {
             rotatedA = false;
         }
     };
+
+    let rotateB = () => {
+        if(!rotatedB) {
+            letterB.style.transition = `transform .5s`;
+            letterB.style.transform = `rotate(180deg)`;
+            rotatedB = true;
+            letterA.style.transition = `transform .5s`;
+            letterA.style.transform = `rotate(0deg)`;
+            rotatedA = false;
+            letterC.style.transition = `transform .5s`;
+            letterC.style.transform = `rotate(0deg)`;
+            rotatedC = false;
+            letterD.style.transition = `transform .5s`;
+            letterD.style.transform = `rotate(0deg)`;
+            rotatedD = false;
+        }
+        else {
+            letterB.style.transition = `transform .5s`;
+            letterB.style.transform = `rotate(0deg)`;
+            rotatedB = false;
+        }
+    };
 };

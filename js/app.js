@@ -96,4 +96,9 @@ window.onload = () => {
             rotatedD = false;
         }
     };
+
+    letterA.addEventListener(`click`, rotateA);
+    letterB.addEventListener(`click`, rotateB);
+    letterC.addEventListener(`click`, rotateC);
+    letterD.addEventListener(`click`, rotateD);
 };

@@ -1,10 +1,10 @@
 let list = document.getElementsByTagName(`td`);
-for(i = 0; i<list.length; i++){
-    list[i].addEventListener('click',animate);
+for(let i = 0; i<list.length; i++){
+    list[i].addEventListener(`click`,animate);
 }
 
 function animate(){
-    for(i = 0; i<list.length; i++){
+    for(let i = 0; i<list.length; i++){
         if(list[i] != event.target && list[i].classList.contains(`animated`)){
             list[i].classList.add(`animated2`);
         }
@@ -18,7 +18,7 @@ function animate(){
 }
 
 function clear(){
-    for(i = 0; i<list.length; i++){
+    for(let i = 0; i<list.length; i++){
         if(list[i].classList.contains(`animated2`)){
             list[i].classList.remove(`animated`);
             list[i].classList.remove(`animated2`);

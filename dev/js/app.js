@@ -1,19 +1,15 @@
 let rotated = false;
 let list = document.getElementsByTagName(`td`);
 for(i = 0; i<list.length; i++){
-    list[i].addEventListener('click',rotation);
+    list[i].addEventListener('click',animate);
 }
 
-function rotation(target){
-    for(z = 0; z<list.length; z++){
-        list[z].style.transform = 'rotate(360deg)';
-    }
-    let goal = event.target;
-    if(rotated == false){
-        goal.style.transform = 'rotate(180deg)';
+function animate(){
+    if(rotated==false){
+        event.target.classList.add(`animated`);
         rotated = true;
     }else{
-        goal.style.transform = 'rotate(360deg)';
+        event.target.classList.add(`animated2`);
         rotated = false;
     }
 }

@@ -1,11 +1,11 @@
-td{
+td {
   border-style: solid;
   border-width: 1px;
   border-color: red;
   text-align: center;
 }
 
-table{
+table {
   position: relative;
   left: 25%;
   margin-top: 20%;
@@ -14,13 +14,13 @@ table{
   border-collapse: collapse;
 }
 
-.animated{
+.animated {
   animation-name: rotating;
   animation-duration: .5s;
   animation-fill-mode: forwards;
 }
 
-.animated2{
+.animated2 {
   animation-name: back-rotating;
   animation-duration: .5s;
   animation-fill-mode: forwards;
@@ -28,18 +28,20 @@ table{
 
 @keyframes rotating {
   from {
-   transform: rotate(0deg);
- }
- to {
-   transform: rotate(180deg);
- }
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
 }
 
 @keyframes back-rotating {
   from {
-   transform: rotate(180deg);
- }
- to {
-   transform: rotate(0deg);
- }
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
 }

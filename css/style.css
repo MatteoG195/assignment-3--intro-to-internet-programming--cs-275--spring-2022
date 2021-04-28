@@ -1,8 +1,19 @@
-td {
+#flip {
     border: black;
     border-width: 3px;
     border-style: solid;
     height: 30px;
     width: 20px;
     padding-left: 10px;
+}
+
+#flipped {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(90deg);
+    transform: scaleX(-1);
 }

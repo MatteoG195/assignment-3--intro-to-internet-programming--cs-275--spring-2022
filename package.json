@@ -25,6 +25,8 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-sass": "^4.1.0",
     "gulp-stylelint": "^8.0.0",
+    "gulp-terser": "^2.0.1",
+    "gulp-uglify-es": "^2.0.0",
     "node-sass": "^5.0.0",
     "stylelint": "^9.10.1"
   }

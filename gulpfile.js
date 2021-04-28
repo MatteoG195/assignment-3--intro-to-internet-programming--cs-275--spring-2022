@@ -10,6 +10,7 @@ const cache = require(`gulp-cache`);
 const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 const cssLinter = require(`gulp-stylelint`);
+const terser = require('gulp-terser');
 let browserChoice = `default`;
 
 async function safari () {
@@ -81,7 +82,7 @@ let transpileJSForDev = () => {
 let transpileJSForProd = () => {
     return src(`dev/js/*.js`)
         .pipe(babel())
-        .pipe(jsCompressor())
+        .pipe(terser())
         .pipe(dest(`prod/js`));
 };
 

@@ -14,13 +14,7 @@ function animate(){
     }else{
         event.target.classList.add(`animated2`);
     }
-    for(i = 0; i< list.length; i++){
-        console.log(list[i]);
-    }
     window.setTimeout(clear,500);
-    for(i = 0; i< list.length; i++){
-        console.log(list[i]);
-    }
 }
 
 function clear(){

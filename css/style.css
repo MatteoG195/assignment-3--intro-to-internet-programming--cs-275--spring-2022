@@ -1,7 +1,3 @@
-* {
-
-}
-
 table {
   border-collapse: collapse;
   position: absolute;
@@ -13,19 +9,15 @@ table {
   margin-left: -200px; /*translates the table half of its width from the 'left' position (horizontal center)*/
 }
 
-tbody{
-
-}
-
 tr {
   text-align: center;
 }
 
 td {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   font-family: 'American Typewriter', Courier, serif;
-  border: 1px solid #ff6f6f;
+  border: 2px solid #ff6f6f;
   transition-duration: 1s;
 }
 

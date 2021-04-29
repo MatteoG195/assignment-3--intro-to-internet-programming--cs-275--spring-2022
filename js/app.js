@@ -25,21 +25,34 @@ window.onload = () => {
         rotate(D);
     });
 
-    // Rotate Function to be check if previous needs to be unrotated and then rotate the current click
+    /* Rotate Function to be check if previous needs to be unrotated
+       and then rotate the current click */
     function rotate(letter){
+
+        // remove normal if it is in class list of current letter
         if(letter.classList.contains(`normal`)){
             letter.classList.remove(`normal`);
         }
+
+        // check if there is a previous letter and if it contains rotate class
         if(past != null && past.classList.contains(`rotate`)){
             unrotate(past);
         }
+
+        // add rotate animation to class list
         letter.classList.add(`rotate`);
+
+        // reassign past to the current letter
         past = letter;
     }
 
     // Unrotate Function to remove rotate and call normal animation
     function unrotate(letter){
+
+        // remove the rotate class from the letter
         letter.classList.remove(`rotate`);
+
+        // add the normal animation to class list
         letter.classList.add(`normal`);
     }
 

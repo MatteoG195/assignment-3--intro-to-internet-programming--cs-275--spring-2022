@@ -1,0 +1,11 @@
+.animated {
+  animation-name: rotating;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}
+
+.animated2 {
+  animation-name: back-rotating;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+}

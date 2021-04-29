@@ -1,5 +1,5 @@
 #flipA {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
@@ -8,18 +8,17 @@
 }
 
 #flippedA {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
     width: 20px;
     padding-left: 10px;
-    transform: rotate(90deg);
-    transform: scaleX(-1);
+    transform: rotate(180deg);
 }
 
 #flipB {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
@@ -28,18 +27,17 @@
 }
 
 #flippedB {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
     width: 20px;
     padding-left: 10px;
-    transform: rotate(90deg);
-    transform: scaleX(-1);
+    transform: rotate(180deg);
 }
 
 #flipC {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
@@ -48,18 +46,17 @@
 }
 
 #flippedC {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
     width: 20px;
     padding-left: 10px;
-    transform: rotate(90deg);
-    transform: scaleX(-1);
+    transform: rotate(180deg);
 }
 
 #flipD {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
@@ -68,12 +65,11 @@
 }
 
 #flippedD {
-    border: black;
+    border: red;
     border-width: 3px;
     border-style: solid;
     height: 30px;
     width: 20px;
     padding-left: 10px;
-    transform: rotate(90deg);
-    transform: scaleX(-1);
+    transform: rotate(180deg);
 }

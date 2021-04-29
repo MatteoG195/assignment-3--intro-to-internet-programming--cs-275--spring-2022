@@ -1,23 +1,44 @@
-let degrees = 0;
 let prev;
-
-let rota = function(td) {
-    degrees+=180;
-    td.style.transform = 'rotate(' + degrees + 'deg)';
-}
+let count = 0;
 
 window.onclick = e => {
     let cur = e.target;
+    console.log(count);
+
     if(cur.tagName != 'TD')
         alert("This element cannot be rotated.");
-    else
-        rota(cur);
+    else {/*first click*/
+        if (count == 0)
+            firstRot(cur);
+        else /*every click after first*/
+            rot(cur);
+    }
 }
 
-/*window.onclick = e => {
-    degrees += 180;
-    let cur = e.target;
-    temp = cur;
-    console.log(cur);
-    cur.style.transform = 'rotate(' + degrees + 'deg)';
-}*/
+
+
+function firstRot(e){
+    e.classList.add("flipped");
+    prev = e;
+    count++;
+}
+
+function rot(e){
+    if (e.className == "flipped") {
+        e.classList.remove("flipped");
+        checkPrev(prev);
+        prev = e;
+    }
+    else {
+        e.classList.add("flipped");
+        checkPrev(prev);
+        prev = e;
+    }
+}
+
+function checkPrev(e){
+    if(e.className == "flipped")
+        e.classList.remove("flipped");
+    else
+        e.classList.add("flipped");
+}

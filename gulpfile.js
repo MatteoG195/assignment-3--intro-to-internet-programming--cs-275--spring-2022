@@ -94,7 +94,7 @@ let lintJS = () => {
         .pipe(jsLinter.formatEach(`compact`, process.stderr));
 };
 
-let gulp = () => {
+let dev = () => {
     browserSync({
         notify: true,
         reloadDelay: 10,
@@ -118,7 +118,7 @@ let gulp = () => {
     ).on(`change`, reload);
 };
 
-exports.allBrowsers = series(allBrowsers, gulp);
+exports.allBrowsers = series(allBrowsers, dev);
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;
 exports.compileCSSForDev = compileCSSForDev;
@@ -127,7 +127,7 @@ exports.lintCSS = lintCSS;
 exports.transpileJSForDev = transpileJSForDev;
 exports.transpileJSForProd = transpileJSForProd;
 exports.lintJS = lintJS;
-exports.gulp = series(lintCSS, compileCSSForDev, lintJS, transpileJSForDev, validateHTML, gulp);
+exports.dev = series(lintCSS, compileCSSForDev, lintJS, transpileJSForDev, validateHTML, dev);
 exports.build = series(
     compressHTML,
     compileCSSForProd,

@@ -1,11 +1,14 @@
 *
 
 !.gitignore
+!package.json
+!package-lock.json
 !.editorconfig
 !.eslintrc.json
 !.stylelintrc.json
 !README.md
 !index.html
 
+!dev/
 !css/
 !js/

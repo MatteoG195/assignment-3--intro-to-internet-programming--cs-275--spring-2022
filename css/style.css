@@ -5,12 +5,12 @@
 table {
   border-collapse: collapse;
   position: absolute;
-  width: 200px;
-  height: 50px;
+  width: 400px;
+  height: 100px;
   top: 50%;  /*top border is placed halfway down the page*/
   left: 50%; /*left border is placed halfway across the page*/
-  margin-top: -25px; /*translates the table half of its height from the 'top' position*/
-  margin-left: -100px; /*translates the table half of its width from the 'left' position*/
+  margin-top: -50px; /*translates the table half of its height from the 'top' position (vertical center)*/
+  margin-left: -200px; /*translates the table half of its width from the 'left' position (horizontal center)*/
 }
 
 tbody{
@@ -22,6 +22,13 @@ tr {
 }
 
 td {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'American Typewriter', Courier, serif;
   border: 1px solid #ff6f6f;
-  transition-duration: 2s;
+  transition-duration: 1s;
+}
+
+.flipped {
+  transform: rotate(180deg);
 }

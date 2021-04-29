@@ -18,7 +18,7 @@ td {
   font-weight: 700;
   font-family: 'American Typewriter', Courier, serif;
   border: 2px solid #ff6f6f;
-  transition-duration: 1s;
+  transition-duration: .5s;
 }
 
 .flipped {

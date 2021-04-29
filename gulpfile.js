@@ -19,8 +19,14 @@ let compressCSS = () => {
         .pipe(dest(`prod/css`));
 };
 
+let transpileJSForDev = () => {
+    return src(`js/*.js`)
+        .pipe(babel())
+        .pipe(dest(`temp/js`));
+};
 exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
+exports.transpileJSForDev = transpileJSForDev;
 
 
 

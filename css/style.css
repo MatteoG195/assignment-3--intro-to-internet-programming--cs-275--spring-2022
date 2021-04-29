@@ -1,4 +1,4 @@
-#flip {
+#flipA {
     border: black;
     border-width: 3px;
     border-style: solid;
@@ -7,7 +7,67 @@
     padding-left: 10px;
 }
 
-#flipped {
+#flippedA {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(90deg);
+    transform: scaleX(-1);
+}
+
+#flipB {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedB {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(90deg);
+    transform: scaleX(-1);
+}
+
+#flipC {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedC {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(90deg);
+    transform: scaleX(-1);
+}
+
+#flipD {
+    border: black;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedD {
     border: black;
     border-width: 3px;
     border-style: solid;

@@ -1,0 +1,27 @@
+
+#tableStyle {
+  width: 85%;
+  margin: 10%; }
+
+#tableStyle td {
+  border: 3px  solid red;
+  padding: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-family: Arial, sans-serif;}
+
+.rotatable {
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.rotated90 {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg); }
+
+.example {
+  width: 90px;
+  height: 90px; }

@@ -6,7 +6,6 @@ window.onload = () => {
     let B = all[1];
     let C = all[2];
     let D = all[3];
-    let past = null;
 
     // Adding Event Listeners to Each Table Cell and Call Rotate on CLick
     A.addEventListener(`click`, () => {
@@ -25,35 +24,69 @@ window.onload = () => {
         rotate(D);
     });
 
-    /* Rotate Function to be check if previous needs to be unrotated
-       and then rotate the current click */
+    // Function to call past(), unrotate(), and then rotate the current letter
     function rotate(letter){
 
-        // remove normal if it is in class list of current letter
-        if(letter.classList.contains(`normal`)){
+        // call past to find which letter is currently rotated
+        let prev = past();
+
+        // call unrotate on the result from past call
+        unrotate(prev);
+
+        // checking if the currently rotated letter is the one clicked on
+        if (prev == letter){
+            // only unrotate needs to happen
+        }
+
+        // checking if the current letter contains the normal class
+        else if (letter.classList.contains(`normal`)){
+            // removes the normal class
             letter.classList.remove(`normal`);
+            letter.classList.add(`rotate`);
+        }
+        // rotates the current letter if nothing needs to be removed
+        else{
+            letter.classList.add(`rotate`);
         }
 
-        // check if there is a previous letter and if it contains rotate class
-        if(past != null && past.classList.contains(`rotate`)){
-            unrotate(past);
-        }
-
-        // add rotate animation to class list
-        letter.classList.add(`rotate`);
-
-        // reassign past to the current letter
-        past = letter;
     }
 
-    // Unrotate Function to remove rotate and call normal animation
+    // Function to find which letter is currently rotated, returns null if none
+    function past(){
+
+        // if statements to find which letter is currently rotated if any
+        let letter = null;
+        if (A.classList.contains(`rotate`)){
+            letter = A;
+        }
+        else if (B.classList.contains(`rotate`)){
+            letter = B;
+        }
+        else if (C.classList.contains(`rotate`)){
+            letter = C;
+        }
+        else if (D.classList.contains(`rotate`)){
+            letter = D;
+        }
+        else{
+            letter = null;
+        }
+        // returns the result
+        return letter;
+    }
+
+    // Function to remove rotate and call normal animation
     function unrotate(letter){
 
-        // remove the rotate class from the letter
-        letter.classList.remove(`rotate`);
+        // unrotate if one is rotated
+        if (letter != null){
 
-        // add the normal animation to class list
-        letter.classList.add(`normal`);
+            // remove the rotate class from the letter
+            letter.classList.remove(`rotate`);
+
+            // add the normal animation to class list
+            letter.classList.add(`normal`);
+        }
     }
 
 };

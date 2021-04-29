@@ -8,7 +8,7 @@ window.onload = () => {
     let D = all[3];
     let past = null;
 
-    // Adding Event Listeners to Each Table Cell
+    // Adding Event Listeners to Each Table Cell and Call Rotate on CLick
     A.addEventListener(`click`, () => {
         rotate(A);
     });

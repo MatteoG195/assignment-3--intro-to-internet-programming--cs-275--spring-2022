@@ -1,4 +1,5 @@
 const { src, dest, series, watch } = require(`gulp`);
+const babel = require(`gulp-babel`);
 const browserSync = require(`browser-sync`);
 const cssCompressor = require(`gulp-clean-css`);
 const cssLinter = require(`gulp-stylelint`);

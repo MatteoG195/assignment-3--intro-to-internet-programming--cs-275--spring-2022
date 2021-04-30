@@ -33,6 +33,7 @@ window.onload = () => {
     function rotate(letter){
         unrotate(pastLetter);
         letter.classList.add(`rotate`);
+        pastLetter = letter;
     }
 
 };

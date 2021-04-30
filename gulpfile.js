@@ -6,7 +6,7 @@ const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 const jsLinter = require(`gulp-eslint`);
 const babel = require(`gulp-babel`);
-const jsCompressor = require(`gulp-uglify`);
+const uglify = require(`gulp-uglify-es`).default;
 const cssCompressor = require(`gulp-clean-css`);
 let browserChoice = `default`;
 
@@ -49,7 +49,7 @@ let transpileJSForDev = () => {
 let transpileJSForProd = () => {
     return src(`js/*.js`)
         .pipe(babel())
-        .pipe(jsCompressor())
+        .pipe(uglify())
         .pipe(dest(`prod/js`));
 };
 

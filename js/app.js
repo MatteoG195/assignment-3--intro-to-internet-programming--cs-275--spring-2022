@@ -48,9 +48,3 @@ D.addEventListener(`click`, ()=>{
     if (C.classList.contains(`rotate`))
         rotate(C);
 });
-
-
-
-
-
-

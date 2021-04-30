@@ -6,4 +6,5 @@ table {
 td {
   font-family: sans-serif;
   border: 2px solid red;
+  width: 40px;
 }

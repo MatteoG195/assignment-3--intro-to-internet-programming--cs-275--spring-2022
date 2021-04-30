@@ -73,3 +73,11 @@
     padding-left: 10px;
     transform: rotate(180deg);
 }
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    border: red;
+    border-style: solid;
+    border-width: 2px;
+}

@@ -10,7 +10,7 @@ td {
   font-size: 40px;
   font-weight: 700;
   font-family: cursive;
-  border: 2px solid #ff6f6f;
+  border: 2px solid red;
   transition-duration: .5s;
 }
 .rotate{

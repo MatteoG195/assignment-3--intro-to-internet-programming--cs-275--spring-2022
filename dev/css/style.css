@@ -1,0 +1,10 @@
+table {
+  border: 2px red solid;
+  font-size: 38px;
+  font-family: cursive;
+  text-align: center;
+  width: 200px;
+}
+.rotate{
+  transform: rotate(180deg);
+}

@@ -11,3 +11,7 @@ td {
   transition: .5s;
   text-align: center;
 }
+
+.rotate {
+  transform: rotate(180deg);
+}

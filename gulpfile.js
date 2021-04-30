@@ -46,7 +46,6 @@ let compressJS = () => {
 exports.compressJS = compressJS;
 //validates javascript
 const jsLinter = require(`gulp-eslint`);
-
 let lintJS = () => {
     return src(`scripts/*.js`)
         .pipe(jsLinter())
@@ -63,3 +62,14 @@ let validateHTML = () => {
 };
 
 exports.validateHTML = validateHTML;
+var serve = require('gulp-serve');
+
+gulp.task('serve', serve('public'));
+gulp.task('serve-build', serve(['public', 'build']));
+gulp.task('serve-prod', serve({
+    root: ['public', 'build'],
+    port: 80,
+    middleware: function(req, res) {
+        // custom optional middleware
+    }
+}));

@@ -37,5 +37,9 @@ window.onload = () => {
     }
 
     function unrotate(letter){
+        if(letter != null){
+            letter.classList.remove(`rotate`);
+            letter.classList.add(`undo`);
+        }
     }
 };

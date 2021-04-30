@@ -1,5 +1,6 @@
 const { src, dest, series, watch } = require(`gulp`);
 const htmlCompressor = require(`gulp-htmlmin`);
+const browserSync = require(`browser-sync`);
 const cssCompressor = require(`gulp-clean-css`);
 const jsLinter = require(`gulp-eslint`);
 
@@ -35,6 +36,30 @@ exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
 exports.transpileJSForDev = transpileJSForDev;
 exports.lintJS = lintJS;
+let serve = () => {
+    browserSync({
+        notify: true,
+        reloadDelay: 0,
+        server: {
+            baseDir: [
+                `./`,
+                `html`,
+            ]
+        }
+    });
 
+    watch(`js/*.js`,
+        series(lintJS, transpileJSForDev)
+    ).on(`change`, reload);
 
+    watch(`css/*.css`,
+        series(lintCSS)
+    ).on(`change`, reload);
+};
 
+exports.serve = series (
+    lintCSS,
+    lintJS,
+    transpileJSForDev,
+    serve
+);

@@ -15,7 +15,7 @@ td{
   transform: rotate(180deg);
 }
 
-.rotated2:active{
+.rotated2{
   animation: rotation2 .5s linear;
 }
 

@@ -1,13 +1,19 @@
 table {
   border: 2px red solid;
-  font-size: 38px;
   font-family: cursive;
   text-align: center;
-  width: 200px;
+  width: 220px;
   margin-left: auto;
   margin-right: auto;
 }
+td {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: cursive;
+  border: 2px solid #ff6f6f;
+  transition-duration: .5s;
+}
 .rotate{
-
-  transform: rotate(180deg);
+  transition: .75s;
+  transform: rotate(0.5turn);
 }

@@ -5,6 +5,7 @@ const cssCompressor = require(`gulp-clean-css`);
 const cssLinter = require(`gulp-stylelint`);
 const jsCompressor = require(`gulp-uglify`);
 const jsLinter = require(`gulp-eslint`);
+const reload = browserSync.reload;
 
 let compressCSS = () => {
     return src(`css/*.css`)

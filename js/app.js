@@ -1,4 +1,5 @@
 let cells = document.getElementsByTagName(`td`);
+
 let a = cells[0]
 let b = cells[1]
 let c = cells[2]
@@ -21,4 +22,16 @@ d.addEventListener(`click`,()=> {
 });
 
 function rotate(e) {
+    if (e.classList.contains(`rotated`)){
+        e.classList.remove(`rotated`);
+        e.classList.add(`rotated2`);
+        clear();
+    }
+    else {
+        clear();
+        e.classList.add(`rotated`);
+    }
+}
+
+function clear() {
 }

@@ -8,4 +8,5 @@ td {
   border: 2px solid red;
   width: 40px;
   padding: 40px;
+  transition: .5s;
 }

@@ -1,16 +1,9 @@
 const { src, dest, series, watch } = require(`gulp`);
-const htmlCompressor = require(`gulp-htmlmin`);
 const browserSync = require(`browser-sync`);
 const cssCompressor = require(`gulp-clean-css`);
 const cssLinter = require(`gulp-stylelint`);
 const jsCompressor = require(`gulp-uglify`);
 const jsLinter = require(`gulp-eslint`);
-
-let compressHTML = () => {
-    return src([`index.html`])
-        .pipe(htmlCompressor({collapseWhitespace: true}))
-        .pipe(dest(`prod/`));
-};
 
 let compressCSS = () => {
     return src(`css/*.css`)
@@ -53,7 +46,6 @@ let lintJS = () => {
         .pipe(jsLinter.formatEach(`compact`));
 };
 
-exports.compressHTML = compressHTML;
 exports.compressCSS = compressCSS;
 exports.transpileJSForDev = transpileJSForDev;
 exports.lintJS = lintJS;

@@ -6,12 +6,10 @@ table{
 td{
     padding:50px;
     border:1px solid black;
+    transform: rotate(0deg);
+    transition: transform .5s ease; 
 }
 .flip{
     transform: rotate(180deg);
     transition: transform .5s ease;
-}
-.Unflip{
-    transform: rotate(0deg);
-    transition: transform .5s ease;  
 }

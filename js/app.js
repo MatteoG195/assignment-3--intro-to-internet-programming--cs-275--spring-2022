@@ -90,7 +90,7 @@ window.onload = () => {
         }
         /* I created event listeners for each variable i also added the click
         function for the user to click and rotate the variables*/
-        /*these referneces are equivelent to the varaibles in the table*/
+        /*the querySelectorAll is a refernce to the variables in the table*/
         let A = document.querySelectorAll(`td`)[0];
             A.addEventListener(`click`, flipA);
 

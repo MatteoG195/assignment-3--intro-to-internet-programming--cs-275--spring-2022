@@ -9,9 +9,13 @@ td {
   border: 1px solid red;
   padding: 10px;
   text-align: center;
-  transition: transform .5s;
 }
 
-td:hover {
+.rotate {
+  transition: transform .5s;
   transform: rotate(180deg);
+}
+
+.undo {
+  transition: transform .5s;
 }

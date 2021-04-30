@@ -30,4 +30,7 @@ window.onload = () => {
         isRotated = true;
     });
 
+    function rotate(letter){
+    }
+
 };

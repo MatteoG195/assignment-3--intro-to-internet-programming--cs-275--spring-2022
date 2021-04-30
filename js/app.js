@@ -34,4 +34,9 @@ function rotate(e) {
 }
 
 function clear() {
+    for(let i = 0; i < cells.length; i++){
+        if (cells[i].classList.contains(`rotated`)){
+            cells[i].classList.remove(`rotated`);
+        }
+    }
 }

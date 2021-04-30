@@ -2,6 +2,7 @@ const { src, dest, series, watch } = require(`gulp`);
 const htmlCompressor = require(`gulp-htmlmin`);
 const browserSync = require(`browser-sync`);
 const cssCompressor = require(`gulp-clean-css`);
+const cssLinter = require(`gulp-stylelint`);
 const jsLinter = require(`gulp-eslint`);
 
 let compressHTML = () => {
@@ -19,6 +20,17 @@ let compressCSS = () => {
                 `${details.name}: ${details.stats.minifiedSize}\n`);
         }))
         .pipe(dest(`prod/css`));
+};
+
+let lintCSS = () => {
+    return src(`css/*.css`)
+        .pipe(cssLinter({
+           failAfterError: true,
+           reporters: [{
+               formatter: `verbose`,
+               console: true
+           }]
+       }));
 };
 
 let transpileJSForDev = () => {
@@ -57,6 +69,7 @@ let serve = () => {
     ).on(`change`, reload);
 };
 
+exports.lintCSS = lintCSS;
 exports.serve = series (
     lintCSS,
     lintJS,

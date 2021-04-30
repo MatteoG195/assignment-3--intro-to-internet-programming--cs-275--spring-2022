@@ -5,7 +5,7 @@ const htmlValidator = require(`gulp-html`);
 const htmlCompressor = require(`gulp-htmlmin`);
 const jsLinter = require(`gulp-eslint`);
 const cssLinter = require(`gulp-stylelint`);
-const jsCompressor = require(`gulp-uglify`);
+const terser = require(`gulp-terser`);
 const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 let browserChoice = `default`;
@@ -79,8 +79,8 @@ let lintJS = () => {
 let transpileJSForProd = () => {
   return src(`dev/js/*.js`)
       .pipe(babel())
-      .pipe(jsCompressor())
-      .pipe(dest(`prod/scripts`));
+      .pipe(terser())
+      .pipe(dest(`prod/js`));
 };
 
 let lintCSS = () => {

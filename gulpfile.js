@@ -46,7 +46,6 @@ let lintJS = () => {
         .pipe(jsLinter.formatEach(`compact`));
 };
 
-exports.lintJS = lintJS;
 let serve = () => {
     browserSync({
         notify: true,
@@ -73,6 +72,7 @@ exports.compressCSS = compressCSS;
 exports.lintCSS = lintCSS;
 exports.transpileJSForDev = transpileJSForDev;
 exports.transpileJSForProd = transpileJSForProd;
+exports.lintJS = lintJS;
 exports.serve = series (
     lintCSS,
     lintJS,

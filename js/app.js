@@ -13,4 +13,16 @@ window.onload=()=>{
         rotate(A);
         temp = A;
     });
+    B.addEventListener('click',()=>{
+        rotate(B);
+        temp = B;
+    });
+    C.addEventListener('click',()=>{
+        rotate(C);
+        temp = C;
+    });
+    D.addEventListener('click',()=>{
+        rotate(D);
+        temp = D;
+    });
 }

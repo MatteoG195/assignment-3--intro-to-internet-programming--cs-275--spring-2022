@@ -73,6 +73,10 @@ exports.lintCSS = lintCSS;
 exports.transpileJSForDev = transpileJSForDev;
 exports.transpileJSForProd = transpileJSForProd;
 exports.lintJS = lintJS;
+exports.build = series (
+    compressCSS,
+    transpileJSForProd,
+);
 exports.serve = series (
     lintCSS,
     lintJS,

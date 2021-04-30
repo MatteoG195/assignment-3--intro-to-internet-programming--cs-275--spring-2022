@@ -36,4 +36,6 @@ window.onload = () => {
         pastLetter = letter;
     }
 
+    function unrotate(letter){
+    }
 };

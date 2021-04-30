@@ -9,4 +9,25 @@ window.onload = () => {
     let D = allLetters[3];
     let pastLetter = null;
     let isRotated = new Boolean(false);
+
+    A.addEventListener(`click`, () => {
+        rotate(A);
+        isRotated = true;
+    });
+
+    B.addEventListener(`click`, () => {
+        rotate(B);
+        isRotated = true;
+    });
+
+    C.addEventListener(`click`, () => {
+        rotate(C);
+        isRotated = true;
+    });
+
+    D.addEventListener(`click`, () => {
+        rotate(D);
+        isRotated = true;
+    });
+
 };

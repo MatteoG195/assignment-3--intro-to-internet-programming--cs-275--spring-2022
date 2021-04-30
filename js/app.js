@@ -14,10 +14,6 @@ window.onload = () => {
             A.classList.add("rotate");
               isflippedA=true;
         }
-        if (isflippedB==true){
-            B.classList.remove("rotate");
-              isflippedB=false;
-        }
         if (isflippedC==true){
             C.classList.remove("rotate");
               sflippedC=false;
@@ -25,6 +21,10 @@ window.onload = () => {
         if (isflippedD==true){
             D.classList.remove("rotate");
                isflippedD=false;
+        }
+        if (isflippedB==true){
+            B.classList.remove("rotate");
+              isflippedB=false;
         }
     }
     /*this is for B to be flipped and A to be unflipped*/
@@ -34,13 +34,13 @@ window.onload = () => {
           B.classList.add("rotate");
             isflippedB=true;
         }
-        if (isflippedC==true){
-            C.classList.remove("rotate");
-                isflippedC=false;
-        }
         if (isflippedD==true){
             D.classList.remove("rotate");
                 isflippedD=false;
+        }
+        if (isflippedC==true){
+            C.classList.remove("rotate");
+                isflippedC=false;
         }
         if (isflippedA==true){
             A.classList.remove("rotate");
@@ -54,14 +54,14 @@ window.onload = () => {
             C.classList.add("rotate");
               isflippedC=true;
           }
-          if (isflippedD==true){
-               D.classList.remove("rotate");
-                  isflippedD=false;
-          }
           if (isflippedA==true){
                A.classList.remove("rotate");
                isflippedA==false;
            }
+          if (isflippedD==true){
+               D.classList.remove("rotate");
+                  isflippedD=false;
+          }
           if (isflippedB==true){
               B.classList.remove("rotate");
                 isflippedB=false;
@@ -75,10 +75,7 @@ window.onload = () => {
               D.classList.add("rotate");
                 isflippedD=true;
            }
-           if (isflippedC==true){
-               C.classList.remove("rotate");
-                 isflippedC=false;
-            }
+
            if (isflippedA==true){
                A.classList.remove("rotate");
                   isflippedA==false;
@@ -87,6 +84,10 @@ window.onload = () => {
                B.classList.remove("rotate");
                   isflippedB=false;
             }
+            if (isflippedC==true){
+                C.classList.remove("rotate");
+                  isflippedC=false;
+             }
         }
         /* I created event listeners for each variable i also added the click
         function for the user to click and rotate the variables*/

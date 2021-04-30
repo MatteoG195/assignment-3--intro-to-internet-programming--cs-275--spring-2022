@@ -7,7 +7,7 @@ window.onload=()=>{
     var temp = 'Null';
 
     function rotate(letter){
-            letter.classList.add('flip');
+            letter.classList.toggle('flip');
     }
 
     A.addEventListener('click',()=>{

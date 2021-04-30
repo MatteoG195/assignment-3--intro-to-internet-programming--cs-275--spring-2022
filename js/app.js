@@ -8,4 +8,5 @@ window.onload = () => {
     let C = allLetters[2];
     let D = allLetters[3];
     let pastLetter = null;
+    let isRotated = new Boolean(false);
 };

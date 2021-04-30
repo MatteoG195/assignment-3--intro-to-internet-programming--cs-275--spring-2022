@@ -7,4 +7,5 @@ window.onload = () => {
     let B = allLetters[1];
     let C = allLetters[2];
     let D = allLetters[3];
+    let pastLetter = null;
 };

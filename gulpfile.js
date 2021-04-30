@@ -3,6 +3,7 @@ const htmlCompressor = require(`gulp-htmlmin`);
 const browserSync = require(`browser-sync`);
 const cssCompressor = require(`gulp-clean-css`);
 const cssLinter = require(`gulp-stylelint`);
+const jsCompressor = require(`gulp-uglify`);
 const jsLinter = require(`gulp-eslint`);
 
 let compressHTML = () => {
@@ -38,6 +39,14 @@ let transpileJSForDev = () => {
         .pipe(babel())
         .pipe(dest(`temp/js`));
 };
+
+let transpileJSForProd = () => {
+    return src(`js/*.js`)
+        .pipe(babel())
+        .pipe(jsCompressor())
+        .pipe(dest(`prod/js`));
+};
+
 let lintJS = () => {
     return src(`js/*.js`)
         .pipe(jsLinter(`.eslintrc.json`))
@@ -70,6 +79,7 @@ let serve = () => {
 };
 
 exports.lintCSS = lintCSS;
+exports.transpileJSForProd = transpileJSForProd;
 exports.serve = series (
     lintCSS,
     lintJS,

@@ -46,7 +46,6 @@ let lintJS = () => {
         .pipe(jsLinter.formatEach(`compact`));
 };
 
-exports.compressCSS = compressCSS;
 exports.transpileJSForDev = transpileJSForDev;
 exports.lintJS = lintJS;
 let serve = () => {
@@ -70,6 +69,8 @@ let serve = () => {
     ).on(`change`, reload);
 };
 
+
+exports.compressCSS = compressCSS;
 exports.lintCSS = lintCSS;
 exports.transpileJSForProd = transpileJSForProd;
 exports.serve = series (

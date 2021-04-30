@@ -4,7 +4,10 @@ table {
   font-family: cursive;
   text-align: center;
   width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .rotate{
+
   transform: rotate(180deg);
 }

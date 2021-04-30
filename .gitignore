@@ -9,6 +9,7 @@
 !index.html
 !package.json
 !package-lock.json
+!gulpfile.js
 
 !css/
 !js/

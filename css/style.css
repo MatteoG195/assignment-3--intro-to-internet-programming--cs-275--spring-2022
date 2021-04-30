@@ -12,7 +12,3 @@ table {
   margin-left: 50%;
   left: -200px;
 }
-
-.rotateLetter {
-  transform: rotate(180deg);
-}

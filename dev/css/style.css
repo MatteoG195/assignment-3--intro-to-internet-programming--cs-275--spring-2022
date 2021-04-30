@@ -1,0 +1,10 @@
+table, tr, td {
+  border: 3px solid red;
+  width: 200px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}

@@ -7,5 +7,8 @@
 !README.md
 !index.html
 
+prod/
+node_modules/
+temp/
 !css/
 !js/

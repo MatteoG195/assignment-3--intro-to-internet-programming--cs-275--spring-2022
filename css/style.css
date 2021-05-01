@@ -5,6 +5,7 @@ td {
 }
 
 table {
+  font-family: papyrus, fantasy;
   width: 400px;
   border-collapse: collapse;
   position: absolute;

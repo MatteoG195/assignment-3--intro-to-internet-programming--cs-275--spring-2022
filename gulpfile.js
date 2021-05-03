@@ -9,19 +9,19 @@ const reload = browserSync.reload;
 
 let validateHTML = () => {
     return src([
-        `html/*.html`,
+        `dev/html/*.html`,
         `html/**/*.html`])
         .pipe(htmlValidator());
 };
 
 let compressHTML = () => {
-    return src([`html/*.html`,`html/**/*.html`])
+    return src([`dev/html/*.html`,`html/**/*.html`])
         .pipe(htmlCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod/`));
 };
 
 let lintCSS = () => {
-    return src(`css/*.css`)
+    return src(`dev/css/*.css`)
         .pipe(cssLinter({
             failAfterError: true,
             reporters: [
@@ -32,7 +32,7 @@ let lintCSS = () => {
 };
 
 let lintJS = () => {
-    return src(`js/*.js`)
+    return src(`dev/js/*.js`)
         .pipe(jsLinter({
             parserOptions: {
                 ecmaVersion: 2017,
@@ -62,22 +62,21 @@ let serve = () => {
         reloadDelay: 0,
         server: {
             baseDir: [
-                `html`,
-                `css`,
-                'js',
+                `dev`,
+                `dev/html`,
             ]
         }
     });
 
-    watch(`js/*.js`,
+    watch(`dev/js/*.js`,
         series(lintJS)
     ).on(`change`, reload);
 
-    watch(`css/*.css`,
+    watch(`dev/css/*.css`,
         series(lintCSS)
     ).on(`change`, reload);
 
-    watch(`html/*.html`,
+    watch(`dev/html/*.html`,
         series(validateHTML, compressHTML)
     ).on(`change`, reload);
 };

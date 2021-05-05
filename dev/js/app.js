@@ -1,4 +1,4 @@
-let list = occurent.getElementsByTagName('td');
+let list = document.getElementsByTagName('td');
 for(let i = 0; i < list.length; i++){
     list[i].addEventListener('click', animate);
 }
@@ -6,7 +6,7 @@ for(let i = 0; i < list.length; i++){
 
 function animate(){
     for(let i = 0; i<list.length; i++){
-        if(list[i] != event.target && list[i]classList.contains('animated')) {
+        if(list[i] != event.target && list[i].classList.contains('animated')) {
             list[i].classList.add('animated_2');
         }
     }

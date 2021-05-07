@@ -68,9 +68,17 @@ let compressJS = () => {
         .pipe(dest(`prod/`));
 };
 
+let transpileJSForProd = () => {
+    return src(`src/js/*.js`)
+        .pipe(babel())
+        .pipe(jsCompressor())
+        .pipe(dest(`prod/js`));
+};
+
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;
 exports.lintCSS = lintCSS;
 exports.compileCSSForProd = compileCSSForProd;
 exports.lintJS = lintJS;
 exports.compressJS = compressJS;
+exports.transpileJSForProd = transpileJSForProd;

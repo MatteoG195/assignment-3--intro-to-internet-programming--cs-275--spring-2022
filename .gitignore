@@ -15,3 +15,5 @@
 !package-lock.json
 
 !.babelrc
+
+node_modules/

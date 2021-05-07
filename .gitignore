@@ -9,3 +9,9 @@
 
 !css/
 !js/
+
+!gulpfile.js
+!package.json
+!package-lock.json
+
+!.babelrc

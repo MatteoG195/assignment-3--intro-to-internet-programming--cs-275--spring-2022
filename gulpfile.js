@@ -65,9 +65,8 @@ let compressJS = () => {
     return src(`src/js/*.js`)
         .pipe(babel())
         .pipe(jsCompressor())
-        .pipe(dest(`prod/js`));
+        .pipe(dest(`prod/`));
 };
-
 
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;

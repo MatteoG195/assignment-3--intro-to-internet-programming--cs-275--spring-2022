@@ -17,5 +17,5 @@
 !.babelrc
 
 
-
+prod/
 node_modules/

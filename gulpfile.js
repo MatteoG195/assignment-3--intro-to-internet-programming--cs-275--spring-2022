@@ -106,6 +106,13 @@ let serve = () => {
 
 };
 
+exports.dev = series(
+    validateHTML,
+    lintCSS,
+    lintJS,
+    serve
+);
+
 
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;

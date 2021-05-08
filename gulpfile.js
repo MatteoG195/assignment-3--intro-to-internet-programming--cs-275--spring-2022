@@ -113,6 +113,13 @@ exports.dev = series(
     serve
 );
 
+exports.build = series(
+    compressHTML,
+    compileCSSForProd,
+    compressJS,
+    transpileJSForProd
+);
+
 
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;

@@ -3,12 +3,42 @@ const sass = require(`gulp-sass`);
 const htmlValidator = require(`gulp-html`);
 const htmlCompressor = require(`gulp-htmlmin`);
 const cssLinter = require(`gulp-stylelint`);
-const babel = require(`gulp-babel`);
 const jsLinter = require(`gulp-eslint`);
 const jsCompressor = require(`gulp-uglify`);
 const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
+const babel = require(`gulp-babel`);
 let browserChoice = `default`;
+
+async function safari () {
+    browserChoice = `safari`;
+}
+
+async function firefox () {
+    browserChoice = `firefox`;
+}
+
+async function chrome () {
+    browserChoice = `google chrome`;
+}
+
+async function opera () {
+    browserChoice = `opera`;
+}
+
+async function edge () {
+    browserChoice = `microsoft-edge`;
+}
+
+async function allBrowsers () {
+    browserChoice = [
+        `safari`,
+        `firefox`,
+        `google chrome`,
+        `opera`,
+        `microsoft-edge`
+    ];
+}
 
 let validateHTML = () => {
     return src(`src/*.html`)
@@ -120,7 +150,13 @@ exports.build = series(
     transpileJSForProd
 );
 
-
+exports.safari = series(safari, serve);
+exports.firefox = series(firefox, serve);
+exports.chrome = series(chrome, serve);
+exports.opera = series(opera, serve);
+exports.edge = series(edge, serve);
+exports.safari = series(safari, serve);
+exports.allBrowsers = series(allBrowsers, serve);
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;
 exports.lintCSS = lintCSS;

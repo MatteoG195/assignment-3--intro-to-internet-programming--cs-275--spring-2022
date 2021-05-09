@@ -8,4 +8,5 @@ td {
   text-align: center;
   width: 45px;
   padding: 45px;
+  transition: .5s;
 }

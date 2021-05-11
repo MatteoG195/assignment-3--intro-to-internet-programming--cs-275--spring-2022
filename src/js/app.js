@@ -84,4 +84,9 @@ window.onload = () => {
             isRotatedC = false;
         }
     };
+
+    A.addEventListener(`click`, rotateA);
+    B.addEventListener(`click`, rotateB);
+    C.addEventListener(`click`, rotateC);
+    D.addEventListener(`click`, rotateD);
 };

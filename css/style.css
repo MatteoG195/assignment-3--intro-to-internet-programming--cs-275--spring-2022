@@ -1,0 +1,26 @@
+table {
+  border-collapse: collapse;
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  top: 50%;  /*top border is placed halfway down the page*/
+  left: 50%; /*left border is placed halfway across the page*/
+  margin-top: -50px; /*translates the table half of its height from the 'top' position (vertical center)*/
+  margin-left: -200px; /*translates the table half of its width from the 'left' position (horizontal center)*/
+}
+
+tr {
+  text-align: center;
+}
+
+td {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'American Typewriter', Courier, serif;
+  border: 2px solid #ff6f6f;
+  transition-duration: .5s;
+}
+
+.flipped {
+  transform: rotate(180deg);
+}

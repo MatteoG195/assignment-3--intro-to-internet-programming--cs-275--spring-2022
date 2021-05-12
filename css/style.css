@@ -1,0 +1,83 @@
+#flipA {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedA {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(180deg);
+}
+
+#flipB {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedB {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(180deg);
+}
+
+#flipC {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedC {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(180deg);
+}
+
+#flipD {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+}
+
+#flippedD {
+    border: red;
+    border-width: 3px;
+    border-style: solid;
+    height: 30px;
+    width: 20px;
+    padding-left: 10px;
+    transform: rotate(180deg);
+}
+
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    border: red;
+    border-style: solid;
+    border-width: 2px;
+}

@@ -1,0 +1,35 @@
+{
+    "name": "assignment-3--intro-to-internet-programming--cs-275--spring-2021",
+    "version": "1.0.0",
+    "description": "* **Do not start this project until you have read these instructions carefully.**  \r * **Read these instructions repeatedly until you understand, then begin your project. If something is not clear, ask.**",
+    "main": ":gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EvanCopeland/assignment-3--intro-to-internet-programming--cs-275--spring-2021.git"
+    },
+    "author": "Evan Copeland",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/EvanCopeland/assignment-3--intro-to-internet-programming--cs-275--spring-2021/issues"
+    },
+    "homepage": "https://github.com/EvanCopeland/assignment-3--intro-to-internet-programming--cs-275--spring-2021#readme",
+    "devDependencies": {
+        "browser-sync": "^2.26.14",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-eslint": "^6.0.0",
+        "gulp-html": "^3.4.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-minify": "^3.1.0",
+        "gulp-serve": "^1.4.0",
+        "gulp-stylelint": "^13.0.0",
+        "gulp-uglify": "^3.0.2",
+        "stylelint": "^13.13.0"
+    },
+    "dependencies": {
+        "gulp-w3c-html-validator": "^3.0.0"
+    }
+}

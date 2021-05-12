@@ -1,0 +1,21 @@
+table {
+  width: 15%;
+  margin: auto;
+  margin-top: 20%;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid red;
+  padding: 10px;
+  text-align: center;
+}
+
+.rotate {
+  transition: transform .5s;
+  transform: rotate(180deg);
+}
+
+.undo {
+  transition: transform .5s;
+}

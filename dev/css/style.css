@@ -1,0 +1,19 @@
+table {
+  border: 2px red solid;
+  font-family: cursive;
+  text-align: center;
+  width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+td {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: cursive;
+  border: 2px solid red;
+  transition-duration: .5s;
+}
+.rotate{
+  transition: .75s;
+  transform: rotate(0.5turn);
+}

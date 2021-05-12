@@ -1,4 +1,5 @@
 *
+!dev/
 
 !.gitignore
 !.editorconfig
@@ -6,6 +7,9 @@
 !.stylelintrc.json
 !README.md
 !index.html
+!package.json
+!package-lock.json
+!gulpfile.js
 
 !css/
 !js/

@@ -1,0 +1,15 @@
+td {
+  border: 1.5px red solid;
+  font-size: 38px;
+  text-align: center;
+}
+
+table {
+  font-family: papyrus, fantasy;
+  width: 400px;
+  border-collapse: collapse;
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 50%;
+  left: -200px;
+}

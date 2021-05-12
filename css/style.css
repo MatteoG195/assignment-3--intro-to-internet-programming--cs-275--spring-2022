@@ -1,0 +1,19 @@
+table {
+  width: 200px;
+}
+
+th {
+text-align: center;
+}
+
+table,tbody, td {
+  border: 1px solid #FF0000;
+  border-collapse: collapse;
+
+}
+
+td:hover {
+padding: 5px;
+transform: rotate(180deg);
+
+}

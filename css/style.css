@@ -1,0 +1,13 @@
+td {
+  border: 1px solid hsl(0, 100%, 45%);
+  text-align: center;
+  padding: 25px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  font-family: sans-serif;
+}

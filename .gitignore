@@ -7,5 +7,14 @@
 !README.md
 !index.html
 
+!gulpfile.js
+!package.json
+!package-lock.json
+
+prod/
+node_modules/
+temp/
+
+!html/
 !css/
 !js/

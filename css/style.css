@@ -1,0 +1,22 @@
+table {
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+td {
+  border: 7px solid #F08080;
+  padding: 20px;
+  text-align: center;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: all .5s;
+}
+
+.rotateback {
+  transform: rotate(360deg);
+  transition: all .5s;
+}

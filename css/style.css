@@ -1,0 +1,42 @@
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse:collapse;
+}
+
+td {
+  border: solid 0.1em #AA0033;
+  margin: 0px;
+  padding: 1em;
+}
+
+.flipped {
+  animation-duration:1s;
+  animation-name:rotateDown;
+  color:blue;
+  transform:rotate(180deg);
+}
+
+.standard {
+  animation-duration:1s;
+  animation-name:rotateUp;
+  transform:rotate(0deg);
+}
+
+@keyframes rotateDown {
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(180deg);
+  }
+}
+
+@keyframes rotateUp {
+  from{
+    transform:rotate(180deg);
+  }
+  to{
+    transform:rotate(0deg);
+  }
+}
